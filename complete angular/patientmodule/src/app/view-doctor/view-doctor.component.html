@@ -1,0 +1,23 @@
+<table>
+    <tr>
+      <td>Doctor Id</td>
+      <td>Doctor Name</td>
+      <td>Doctor password</td>
+      <td>Location</td>
+      <td>Specialization1</td>
+      <td>Specialization2</td>
+      <td>Specialization3</td>
+    </tr>
+    <tr *ngFor="let doc of doctors">
+  <td>{{doc.did}}</td>
+  <td>{{doc.dname}}</td>
+  <td>{{doc.password}}</td>
+  <td>{{doc.location.areaName}}</td>
+  <td>{{doc.Specialization1}}</td>
+  <td>{{doc.Specialization2}}</td>
+  <td>{{doc.Specialization3}}</td>
+  <td><button class="btn btn-danger" (click)="edit(doc)">Edit</button>
+    <button class="btn btn-danger" (click)="delete(doc)">Delete</button></td>
+    </tr>
+  </table>
+  

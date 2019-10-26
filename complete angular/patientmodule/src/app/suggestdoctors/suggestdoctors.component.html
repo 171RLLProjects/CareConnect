@@ -1,0 +1,16 @@
+
+
+<style>
+    .c1{
+      top:1%;
+      right:1%;
+      position:absolute;
+    }
+    </style>
+<h1>Suggested Doctors</h1>
+<div *ngFor='let doctor of doctors'>
+ <a class="nav-link" (click)="doctorDetails(doctor.did)">{{doctor.dname}}   View Doctor Information</a>
+</div>
+<div class="c1">
+    <button class="btn btn-primary"(click)="logout()">Logout</button>
+  </div>

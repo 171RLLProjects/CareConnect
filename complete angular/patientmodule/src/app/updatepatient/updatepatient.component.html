@@ -1,0 +1,23 @@
+<style>
+   .c1{
+     top:1%;
+     right:1%;
+     position:absolute;
+   }
+</style>
+<form class="form-inline">
+   <h2 >Add Symptom</h2>
+    <div class="form-group">
+       <br/><br/>
+       <input type="text" name="symptom" [(ngModel)]="this.symptom" class="form-control" >
+    </div>
+    <br/>
+    <br/>
+    <div>
+         <input type="submit" value="updatepatient" (click)=" updatePatient()">   
+    </div>
+   </form>
+   
+    <div class="c1">
+      <button class="btn btn-primary"(click)="logout()">Logout</button>
+    </div>

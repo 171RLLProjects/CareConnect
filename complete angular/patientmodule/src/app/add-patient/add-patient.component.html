@@ -1,0 +1,121 @@
+
+<div class="jumbotron">
+  <div class="container">
+      <div class="row">
+          <div class="col-md-6 offset-md-3">
+              <h2>Enter The Following Details:</h2>
+              
+<form name="form" (ngSubmit)="f.form.valid && addPatient()" #f="ngForm" novalidate>
+ 
+  <div class="form-group">
+    <label for="pname">patient Name</label>
+    <input type="text" class="form-control" name="pname" [(ngModel)]="patient.pname" #pname="ngModel" [ngClass]="{ 'is-invalid': f.submitted && pname.invalid }" required />
+    <div *ngIf="f.submitted && pname.invalid" class="invalid-feedback">
+    <div *ngIf="pname.errors.required">Patient Name is required</div>
+          </div>
+        </div>
+
+
+<div class="form-group">
+  <label for="gender">gender</label>
+<input type="text" class="form-control" name="gender" [(ngModel)]="patient.gender" #gender="ngModel" [ngClass]="{ 'is-invalid': f.submitted && gender.invalid }" required />
+  <div *ngIf="f.submitted && gender.invalid" class="invalid-feedback">
+<div *ngIf="gender.errors.required">gender is required</div>
+    </div>
+</div>
+
+<div class="form-group">
+    <label for="age">Age</label>
+  <input type="text" class="form-control" name="age" [(ngModel)]="patient.age" #age="ngModel" [ngClass]="{ 'is-invalid': f.submitted && age.invalid }" required />
+    <div *ngIf="f.submitted && age.invalid" class="invalid-feedback">
+  <div *ngIf="age.errors.required">age is required</div>
+      </div>
+  </div>
+
+  
+    <div class="form-group">
+        <label for="phnNo">Patient PhoNo</label>
+      <input type="text" class="form-control" name="phnNo" [(ngModel)]="patient.phnNo" #phnNo="ngModel" [ngClass]="{ 'is-invalid': f.submitted && phnNo.invalid }" required />
+        <div *ngIf="f.submitted && phnNo.invalid" class="invalid-feedback">
+      <div *ngIf="phnNo.errors.required">Patient PhoNo is required</div>
+          </div>
+      </div>
+
+
+      <div class="form-group">
+          <label for="email">Email</label>
+          <input type="text" class="form-control" name="email" [(ngModel)]="patient.email" #email="ngModel" [ngClass]="{ 'is-invalid': f.submitted && email.invalid }" required email />
+          <div *ngIf="f.submitted && email.invalid" class="invalid-feedback">
+              <div *ngIf="email.errors.required">Email is required</div>
+              <div *ngIf="email.errors.email">Email must be a valid email address</div>
+          </div>
+      </div>
+
+      
+      <div class="form-group">
+          <label for="streetName">StreetName</label>
+        <input type="text" class="form-control" name="streetName" [(ngModel)]="patient.streetName" #streetName="ngModel" [ngClass]="{ 'is-invalid': f.submitted && streetName.invalid }" required />
+          <div *ngIf="f.submitted && streetName.invalid" class="invalid-feedback">
+        <div *ngIf="streetName.errors.required">Patient StreetName is required</div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="areaName">AreaName</label>
+          <input type="text" class="form-control" name="areaName" [(ngModel)]="patient.areaName" #areaName="ngModel" [ngClass]="{ 'is-invalid': f.submitted && areaName.invalid }" required />
+            <div *ngIf="f.submitted && areaName.invalid" class="invalid-feedback">
+          <div *ngIf="areaName.errors.required">areaName is required</div>
+              </div>
+          </div>
+
+          <div class="form-group">
+              <label for="city">City</label>
+            <input type="text" class="form-control" name="city" [(ngModel)]="patient.city" #city="ngModel" [ngClass]="{ 'is-invalid': f.submitted && city.invalid }" required />
+              <div *ngIf="f.submitted && city.invalid" class="invalid-feedback">
+            <div *ngIf="city.errors.required">City is required</div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="pincode">Pincode</label>
+              <input type="text" class="form-control" name="pincode" [(ngModel)]="patient.pincode" #pincode="ngModel" [ngClass]="{ 'is-invalid': f.submitted && pincode.invalid }" required />
+                <div *ngIf="f.submitted && pincode.invalid" class="invalid-feedback">
+              <div *ngIf="pincode.errors.required">Pincode is required</div>
+                  </div>
+              </div>
+
+              <div class="form-group">
+                  <label for="symptom">Symptom</label>
+                <input type="text" class="form-control" name="symptom" [(ngModel)]="patient.symptom" #symptom="ngModel" [ngClass]="{ 'is-invalid': f.submitted && symptom.invalid }" required />
+                  <div *ngIf="f.submitted && symptom.invalid" class="invalid-feedback">
+                <div *ngIf="symptom.errors.required">Symptom is required</div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" class="form-control" name="password" [(ngModel)]="patient.password" #password="ngModel" [ngClass]="{ 'is-invalid': f.submitted && password.invalid }" required minlength="6" />
+                    <div *ngIf="f.submitted && password.invalid" class="invalid-feedback">
+                        <div *ngIf="password.errors.required">Password is required</div>
+                        <div *ngIf="password.errors.minlength">Password must be at least 6 characters</div>
+                    </div>
+                </div>
+
+                
+    
+                <div class="form-group">
+                  <label for="history">History</label>
+                <input type="file" class="form-control" [(ngModel)]="patient.history" name="history" accept=".txt"/>
+                 
+                    
+                </div>
+
+                
+    
+
+<input type="submit"value="Sign Up">
+</form>
+</div>
+</div>
+</div>
+</div>

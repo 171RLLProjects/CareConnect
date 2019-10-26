@@ -1,0 +1,35 @@
+<style>
+  .c1{
+    top:1%;
+    right:1%;
+    position:absolute;
+    
+}
+h2 {
+  text-align: center;
+  color:blue;
+  }
+ </style>
+<form class="form-inline">
+<div class="form-group">
+<h2>Welcome {{patient.pname}}</h2>
+<div >
+    <input type="submit" (click)='reqAppointment()' value="Request Appointment" class="form-control">
+    </div>
+  </div>
+    <form *ngIf=check>
+      <div>
+          <label>Appointment Date</label>
+          <input type="text"name="adate"[(ngModel)]="adate"class="form-control"placeholder="dd-mm-yyyy"><br/><br/>
+ </div>
+ <input type="submit" (click)="addsymptom()"  value="submit"/>
+</form>
+<br/><br/><br/>
+<div>
+  <input type="submit" value="view Appointments" (click)="patientappointments()" class ="form-control">
+</div>
+</form>
+<div class="c1">
+  <button class="btn btn-primary"(click)="logout()">Logout</button>
+</div>
+

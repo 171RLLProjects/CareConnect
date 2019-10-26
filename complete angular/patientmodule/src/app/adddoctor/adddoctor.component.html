@@ -1,0 +1,37 @@
+<form (ngSubmit)="adddoctor()" class="form-inline">
+    <div class="form-group">
+    <label>Doctor Id</label>
+    <input type="text" name="did" [(ngModel)]="doctor.did" class="form-control" ><br><br>
+  </div>
+  <div class="form-group">
+      <label>Doctor Name</label>
+      <input type="text" name="dname" [(ngModel)]="doctor.dname" class="form-control" ><br><br>
+    </div>
+    <div class="form-group">
+        <label>password</label>
+        <input type="text" name="password" [(ngModel)]="doctor.password" class="form-control" ><br><br>
+      </div>
+      <div class="form-group">
+          <label for="Location" class="class-label">locations</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <select id="location" required #location="ngModel" name="location" [(ngModel)]="locid"  class="form-control"><br><br>
+        <option value="-1">Select location</option>
+        <option *ngFor='let loc of locations' [value]="loc.locid">
+          {{loc.areaName}}
+        </option>
+          </select>
+          </div>
+       <div class="form-group" >
+              <button class="btn btn-primary" (click)="addspecialization()">Add Specialziation</button>
+          </div>
+          <form *ngIf="check">
+          <div class="form-group">
+              <label  class="class-label">specialization No.1</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+             <input type="text" name="specialization1" [(ngModel)]="doctor.specializations[0]" class="form-control">
+             <label  class="class-label">specialization No.2</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+             <input type="text" name="specialization2" [(ngModel)]="doctor.specializations[1]" class="form-control">
+             <label  class="class-label">specialization No.3</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+             <input type="text" name="specialization3" [(ngModel)]="doctor.specializations[2]" class="form-control">
+          </div>
+          </form>
+<input type="submit" value="addDoctor">
+  </form>

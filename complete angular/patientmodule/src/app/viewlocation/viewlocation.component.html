@@ -1,0 +1,20 @@
+<table>
+    <tr>
+      <td>Locaiton Id</td>
+      <td>StreetName</td>
+      <td>AreaName</td>
+      <td>city</td>
+      <td>pincode</td>
+      
+    </tr>
+    <tr *ngFor="let loc of locations">
+  <td>{{loc.locid}}</td>
+  <td>{{loc.streetName}}</td>
+  <td>{{loc.areaName}}</td>
+  <td>{{loc.city}}</td>
+  <td>{{loc.pincode}}</td>
+  <td><button class="btn btn-danger" (click)="edit(loc)">Edit</button>
+    <button class="btn btn-danger" (click)="delete(loc)">Delete</button></td>
+    </tr>
+  </table>
+  

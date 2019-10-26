@@ -1,0 +1,31 @@
+<style>
+  .c1{
+    top:1%;
+    right:1%;
+    position:absolute;
+  }
+
+  label {
+    text-align: center;
+    color:blue;
+  }
+
+  h4{
+    text-align: center;
+  }
+</style>
+<label>Doctor Name:</label>
+  <h4>{{doctor.dname}}</h4>
+  <label>Specializations:</label>
+  <h4>{{doctor.specializations}}</h4>
+  <label>Hospital Address</label>
+  <h4>{{doctor.location.streetName}}</h4>
+  <h4>{{doctor.location.areaName}}</h4>
+  <h4>{{doctor.location.city}}</h4>
+  <h4>{{doctor.location.pincode}}</h4>
+ 
+  <button class="btn btn-danger" (click)="confirm()">Confirm</button>
+    
+  <div class="c1">
+    <button class="btn btn-primary"(click)="logout()">Logout</button>
+  </div>
