@@ -1,0 +1,17 @@
+<form (ngSubmit)="addLeave()" class="form-inline">
+  <div class="form-group">
+<label>Leave id:</label>
+<input type="text" name="lid" [(ngModel)]="leave.lid" class="form-controller" ><br/><br/>
+</div><br/><br/>
+<div class="form-group">
+<label>From Date:</label>
+<input type="text" name="fromDate" [(ngModel)]="leave.fromDate" class="form-controller"><br/><br/>
+</div><br/><br/>
+<div class="form-group">
+<label>To Date:</label>
+<input type="text" name="toDate" [(ngModel)]="leave.toDate" class="form-controller"><br/><br/>
+</div><br/><br/>
+<div class="form-group">
+<input type="submit" value="AddLeave" class="form-controller">
+</div> 
+  </form>

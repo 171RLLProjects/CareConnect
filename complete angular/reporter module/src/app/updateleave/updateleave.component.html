@@ -1,0 +1,28 @@
+<br/><br/>
+<style>
+  .c1{
+    top:1%;
+    right:1%;
+    position:absolute;
+  }
+ 
+</style>
+<table class="table">
+<tr>
+ <td>&nbsp;Leave id</td>&nbsp;
+ <td>&nbsp;From Date</td>&nbsp;
+ <td>&nbsp;To Date</td>&nbsp;
+ <td>&nbsp;Leave Status</td>&nbsp;
+  </tr>
+ <tr *ngFor='let l1 of leaves'>
+   <td>&nbsp;{{l1.lid}}</td>&nbsp;
+   <td>&nbsp;{{l1.fromDate | date: 'fullDate'}}</td>&nbsp;
+   <td>&nbsp;{{l1.toDate  | date: 'fullDate'}}</td>&nbsp;
+   <td>&nbsp;{{l1.leaveStatus}}</td>
+   <td><button class="btn btn-primary"(click)="updateLeave(l1)">Approve</button></td>
+   </tr>
+  </table> 
+  <br/><br/>
+ <div class="c1">
+  <button class="btn btn-primary"(click)="logout()">Logout</button>
+</div>

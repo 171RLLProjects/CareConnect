@@ -1,0 +1,15 @@
+<table>
+<tr>
+    <td>Reporter id</td>
+    <td>Reporter Name</td> 
+  </tr>
+
+  <tr *ngFor='let rep of reporter'>
+      <td>{{rep.rid}}</td>
+      <td>{{rep.rname}}</td>
+     
+      
+      <td><button class="btn btn-primary" (click)="edit(emp)">EditRepoter</button></td>
+      <td><button class="btn btn-primary" (click)="delete(emp)">DeleteReporter</button></td>
+   </tr>
+</table>

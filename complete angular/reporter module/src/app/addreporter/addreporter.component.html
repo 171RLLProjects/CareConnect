@@ -1,0 +1,18 @@
+<form (ngSubmit)="addReporter()" class="form-inline">
+  <div class="form-group">
+<label>Reporter id:</label>
+<input type="text" name="rid" [(ngModel)]="reporter.rid" class="form-controller" ><br/><br/>
+</div><br/>
+<div class="form-group">
+<label>Reporter name:</label>
+<input type="text" name="rname" [(ngModel)]="reporter.rname" class="form-controller"><br/><br/>
+</div><br/>
+<div class="form-group">
+<label>Password:</label>
+<input type="password" name="password" [(ngModel)]="reporter.password" class="form-controller"><br/><br/>
+</div><br/>
+<div class="form-group">
+  <input type="submit" value="AddReporter" class="form-controller">
+  </div>
+  
+  </form>
