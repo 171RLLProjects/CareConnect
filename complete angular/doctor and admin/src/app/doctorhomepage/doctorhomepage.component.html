@@ -1,0 +1,25 @@
+<style>
+    .c1{
+      top:1%;
+      right:1%;
+      position:absolute;
+    }
+   
+  </style>
+<body bg-color= "lightblue">
+<div class="form-group">
+<h1 style="color:blue;">WELCOME {{doctor.dname| uppercase }}</h1>
+</div>
+<nav class="navbar navbar-light bg-faded">
+  <a align="center" class="button" [routerLink]="['/appdetailsford',this.did]">view appointments</a>
+  <br/><br/>
+  <input type="button" class="button" align="center" value="req leave" (click)="checkAndReqLeave()"/>
+  <br/><br/>
+  <a class="button" align="center" [routerLink]="['/getleavesbydoctor',this.did]">Leaves Information</a>
+    
+  
+</nav>
+<div >
+    <button class="button"(click)="logout()">Logout</button>
+  </div>
+</body>

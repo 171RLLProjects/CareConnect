@@ -1,0 +1,19 @@
+<h4>LEAVES INFORMATION</h4>
+<table class="table">
+  <tr>
+
+    <td>Leave Id</td>
+    <td>From Date</td>
+    <td>To Date</td>
+    <td>status</td>
+
+
+
+  </tr>
+  <tr *ngFor='let leave of leaves'>
+    <td>{{leave.lid}}</td>
+    <td>{{leave.fromDate | date: 'fullDate'}}</td>
+    <td>{{leave.toDate | date: 'fullDate'}}</td>
+    <td>{{leave.leaveStatus}}</td>
+  </tr>
+</table>

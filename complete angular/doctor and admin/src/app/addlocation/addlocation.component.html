@@ -1,0 +1,49 @@
+<div class="jumbotron">
+   <div class="container">
+      <div class="row">
+         <div class="col-md-6 offset-md-3">
+            <form name="form" (ngSubmit)="f.form.valid && addlocation()" #f="ngForm" novalidate>                 
+               <div class="form-group">
+                  <label>Location Id</label>
+                  <input type="text" name="locid" [(ngModel)]="location.locid" class="form-control" disabled>
+               </div>
+               <br />
+
+               <div class="form-group">
+                  <label for="streetName">Street Name</label>
+                  <input type="text" class="form-control" name="streetName" [(ngModel)]="location.streetName" #streetName="ngModel" [ngClass]="{ 'is-invalid': f.submitted && streetName.invalid }" required street Name/><br><br>
+                  <div *ngIf="f.submitted && streetName.invalid" class="invalid-feedback">
+                        <div *ngIf="streetName.errors.required">Street Name is required</div>
+                    </div>
+               </div>
+               <br />
+               <div class="form-group">
+                     <label for="areaName">Area Name</label>
+                     <input type="text" class="form-control" name="areaName" [(ngModel)]="location.areaName" #areaName="ngModel" [ngClass]="{ 'is-invalid': f.submitted && areaName.invalid }" required /><br><br>
+                     <div *ngIf="f.submitted && areaName.invalid" class="invalid-feedback">
+                           <div *ngIf="areaName.errors.required">Area Name is required</div>
+                       </div>
+                  </div>
+                  <br />
+                  <div class="form-group">
+                        <label for="city">City Name</label>
+                        <input type="text" class="form-control" name="city" [(ngModel)]="location.city" #city="ngModel" [ngClass]="{ 'is-invalid': f.submitted && city.invalid }" required /><br><br>
+                        <div *ngIf="f.submitted && city.invalid" class="invalid-feedback">
+                              <div *ngIf="city.errors.required">City Name is required</div>
+                          </div>
+                     </div>
+                     <br />
+                     <div class="form-group">
+                           <label for="pincode">Pin Code</label>
+                           <input type="number" class="form-control" name="pincode" [(ngModel)]="location.pincode" #pincode="ngModel" [ngClass]="{ 'is-invalid': f.submitted && pincode.invalid }" required /><br><br>
+                           <div *ngIf="f.submitted && pincode.invalid" class="invalid-feedback">
+                                 <div *ngIf="pincode.errors.required">pincode  is required</div>
+                             </div>
+                        </div>
+                        <br />
+               <input type="submit" value="Add Location">
+            </form>
+         </div>
+      </div>
+   </div>
+</div>

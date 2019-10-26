@@ -1,0 +1,21 @@
+
+<div class="form-group">
+  <h1>WELCOME {{this.aname | uppercase}}</h1>
+  </div>
+  <nav class="navbar navbar-light bg-faded">
+    <a class="button" [routerLink]="['/viewappointments']">view appointments</a><br/>
+    <a class="button" [routerLink]="['/adddoctor']">Add Doctor</a><br/>
+    <a class="button" [routerLink]="['/viewdoctors']">view doctors</a><br/>
+    
+    <a class="button" [routerLink]="['/addreporter']">Add Reporter</a><br/>
+    <a class="button" [routerLink]="['/addlocation']">add location</a><br/>
+    <a class="button" [routerLink]="['/viewlocations']">view locations</a><br/>
+     
+    <div >
+        <button class="button"(click)="logout()">Logout</button>
+      </div>
+
+    
+  </nav>
+
+  

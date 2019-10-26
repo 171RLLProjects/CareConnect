@@ -1,0 +1,4 @@
+ <h1>Suggested Doctors</h1>
+ <div *ngFor='let doctor of doctors'>
+  <a class="nav-link" (click)="doctorDetails(doctor.did)">{{doctor.dname}}   View Doctor Information</a>
+ </div>

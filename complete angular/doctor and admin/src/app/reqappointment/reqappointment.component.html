@@ -1,0 +1,10 @@
+<form (ngSubmit)="reqAppointment()" class="form-inline">
+  <div class="form-group">
+<label>Appointment Date</label>
+<input type="text" name="adate"[(ngModel)]="adate" class="form-control" placeholder="dd-mm-yyyy"><br/><br/>
+
+</div>
+<div>
+  <input type="submit" value="Request Appointment" class="form-control">
+</div>
+</form>

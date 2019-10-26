@@ -1,0 +1,24 @@
+<h4>YOUR APPOINTMENTS</h4>
+<table class="table">
+  <tr>
+    
+    <td>Appointment Date</td>
+    <td>Patient Name</td>
+    <td>Patient Age</td>
+    <td>Patient Gender</td>
+    <td>Symptom</td>
+    <td>History</td>
+    
+
+  </tr>
+  <tr *ngFor = 'let appointment of appointments'>
+    <td>{{appointment.appointmentDate | date: 'fullDate'}}</td>
+    <td>{{appointment.patient.pname}}</td>
+    <td>{{appointment.patient.age}}</td>
+    <td>{{appointment.patient.gender}}</td>
+    <td>{{appointment.patient.symptom}}</td>
+    <td>{{appointment.patient.history}}</td>
+
+    
+  </tr>
+</table>

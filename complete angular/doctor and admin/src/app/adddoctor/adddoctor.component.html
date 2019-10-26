@@ -1,0 +1,55 @@
+<div class="jumbotron">
+    <div class="container">
+       <div class="row">
+          <div class="col-md-6 offset-md-3">
+
+<form  class="form-inline">
+  <div class="form-group">
+  <label for="did">Doctor Id:</label>
+  <input type="text" name="did" [(ngModel)]="doctor.did" class="form-control" disabled >
+</div>
+<br/><br/>
+<div class="form-group">
+    <label for="dname">Doctor Name:</label>
+    <input type="text" name="dname" [(ngModel)]="doctor.dname" class="form-control" >
+  </div>
+  <br/><br/>
+  <div class="form-group">
+      <label for="password">Password:</label>
+      <input type="text" name="password" [(ngModel)]="doctor.password" class="form-control" >
+    </div>
+    <br/><br/>
+    <div class="form-group">
+        <label for="Location" class="class-label">locations</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <select id="location" required #location="ngModel" name="location" [(ngModel)]="locid"  class="form-control">
+      <option value="-1">Select location</option>
+      <option *ngFor='let location of locations' [value]="location.locid">
+        {{location.locid}}:{{location.areaName}}
+      </option>
+        </select>
+        </div>
+        <br/><br/>
+     <div class="form-group" >
+            <button class="btn btn-primary" (click)="addSpecialization()">Add Specialziation</button>
+        </div>
+        <form *ngIf="check">
+        <div class="form-group">
+            <label  class="class-label">specialization No.1</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+           <input type="text" name="specialization1" [(ngModel)]="spec1" class="form-control">
+           <br/><br/>
+           <label  class="class-label">specialization No.2</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+           <input type="text" name="specialization2" [(ngModel)]="spec2" class="form-control">
+           <br/><br/>
+           <label  class="class-label">specialization No.3</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+           <input type="text" name="specialization3" [(ngModel)]="spec3" class="form-control">
+        </div>
+        </form>
+        <br/><br/>
+
+</form>
+<input type="submit" (click)="addDoctor()" value="Add Doctor">
+</div>
+</div>
+</div>
+</div>
+

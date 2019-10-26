@@ -1,0 +1,35 @@
+<style>
+th{
+  text-align: center;
+  color:blue;
+}
+td{
+  text-align: center;
+  
+}
+</style>
+
+<table class="table">
+  <tr>
+    <th>Doctor Id</th>
+    <th>Doctor Name</th>
+    <th>Doctor password</th>
+    <th>Location</th>
+    <th>Specialization1</th>
+    <th>Specialization2</th>
+    <th>Specialization3</th>
+    <th>Edit</th>
+    <th>delete</th>
+  </tr>
+  <tr *ngFor="let doc of doctors">
+<td>{{doc.did}}</td>
+<td>{{doc.dname}}</td>
+<td>{{doc.password}}</td>
+<td>{{doc.location.areaName}}</td>
+<td>{{doc.specializations[0]}}</td>
+<td>{{doc.specializations[1]}}</td>
+<td>{{doc.specializations[2]}}</td>
+<td><button class="btn btn-primary" (click)="edit(doc)">Edit</button></td>
+<td><button class="btn btn-primary" (click)="delete(doc)">Delete</button></td>
+  </tr>
+</table>

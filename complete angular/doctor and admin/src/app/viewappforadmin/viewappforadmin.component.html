@@ -1,0 +1,21 @@
+<br/>
+
+<table class="table">
+<tr>
+ <td>&nbsp;Appointment id</td>&nbsp;
+ <td>&nbsp;Appointment Date</td>&nbsp;
+ <td>&nbsp;Doctor name</td>&nbsp;
+ <td>&nbsp;Patient name</td>&nbsp;
+ <td>&nbsp;Appointment status</td>&nbsp;
+  </tr>
+ <tr *ngFor='let a of appointments'>
+   <td>&nbsp;{{a.appointmentId}}</td>&nbsp;
+   <td>&nbsp;{{a.appointmentDate | date: 'fullDate'}}</td>&nbsp;
+   <td>&nbsp;{{a.doctor.dname}}</td>&nbsp;
+   <td>&nbsp;{{a.patient.pname}}</td>
+   <td>&nbsp;{{a.status}}</td>
+   <td><button class="btn btn-primary" (click)="updateAppointment(a)">Approve</button></td>
+   </tr>
+  </table> 
+  <br/><br/>
+ 
